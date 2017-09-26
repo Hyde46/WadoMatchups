@@ -5,11 +5,16 @@
     <string name="player_first_name">First Name</string>
     <string name="button_find_matchup">Find Matchup</string>
     <string name="matchup_not_available">No Matchup Available</string>
-    <string name="left_opponent" translatable="false">Timmy</string>
-    <string name="right_opponent" translatable="false">Johnny</string>
+    <string name="left_opponent">Timmy</string>
+    <string name="right_opponent">Johnny</string>
     <string name="table_text">Table</string>
     <string name="table_number" translatable="false">1</string>
     <string name="round_text">"Round : "</string>
     <string name="round_number" translatable="false">1</string>
     <string name="button_synch_matchup">Update Matchup</string>
+    <string name="preference_file_key" translatable="false">de.winadual.wadomatchups.PREFERENCE_FILE_KEY</string>
+    <string name="saved_first_name_default" translatable="false">Timmy</string>
+    <string name="saved_last_name_default" translatable="false">Junior</string>
+    <string name="saved_first_name" translatable="false">de.winadual.wadomatchups.PREF_FIRST_NAME</string>
+    <string name="saved_last_name" translatable="false">de.winadual.wadomatchups.PREF_LAST_NAME</string>
 </resources>
