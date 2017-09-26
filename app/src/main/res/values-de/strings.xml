@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_find_matchup">Finde Gegner</string>
+    <string name="player_first_name">Vorname</string>
+    <string name="player_name">Nachname</string>
+    <string name="matchup_not_available">Kein Gegner gefunden</string>
+    <string name="left_opponent"></string>
+    <string name="table_text">Tisch</string>
+    <string name="round_text">"Runde : "</string>
+    <string name="button_synch_matchup">Aktualisieren</string>
+</resources>

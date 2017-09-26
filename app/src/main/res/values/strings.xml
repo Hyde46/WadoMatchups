@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">WadoMatchup</string>
+    <string name="welcome_text" translatable="false">WADO Matchup</string>
+    <string name="player_name">Last Name</string>
+    <string name="player_first_name">First Name</string>
+    <string name="button_find_matchup">Find Matchup</string>
+    <string name="matchup_not_available">No Matchup Available</string>
+    <string name="left_opponent" translatable="false">Timmy</string>
+    <string name="right_opponent" translatable="false">Johnny</string>
+    <string name="table_text">Table</string>
+    <string name="table_number" translatable="false">1</string>
+    <string name="round_text">"Round : "</string>
+    <string name="round_number" translatable="false">1</string>
+    <string name="button_synch_matchup">Update Matchup</string>
+</resources>
