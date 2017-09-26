@@ -20,17 +20,17 @@ public class SetNameActivity extends AppCompatActivity {
     }
 
     public void viewMatchup(View view){
-        safeCredentials(view);
+        safeCredentials();
         Intent intent = new Intent(this, ViewMatchupActivity.class);
         startActivity(intent);
     }
 
-    private void safeCredentials(View view){
+    private void safeCredentials(){
 
         EditText firstNameEdit = (EditText) findViewById(R.id.firstNameText);
         EditText lastNameEdit = (EditText) findViewById(R.id.lastNameText);
 
-        String firstName = firstNameEdit.getText().toString();
+        String firstName =  firstNameEdit.getText().toString();
         String lastName = lastNameEdit.getText().toString();
 
         //safe names as key value pairs to shared preferences
