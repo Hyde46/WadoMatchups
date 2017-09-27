@@ -8,5 +8,6 @@
     <string name="table_text">Tisch</string>
     <string name="round_text">"Runde : "</string>
     <string name="button_synch_matchup">Aktualisieren</string>
-    <string name="right_opponent">Johnny</string>
+    <string name="right_opponent">noch festzulegen</string>
+    <string name="matchup_no_connection">Server konnte nicht erreicht werden</string>
 </resources>
