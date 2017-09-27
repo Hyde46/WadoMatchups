@@ -1,12 +1,10 @@
 package de.winadual.wadomatchups;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -62,9 +60,14 @@ public class ViewMatchupActivity extends AppCompatActivity {
     private void requestMatchup(String[] playerName){
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://www.google.com";
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+        //Incoporate playerName into request
+        // as GET Request for now
+
+        String url = "http://www.google.com";
+        String reqUrl = url+"?firstName="+playerName[0]+"&lastName="+playerName[1];
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, reqUrl,
                 new Response.Listener<String>(){
                         @Override
                         public void onResponse(String response) {
@@ -74,7 +77,6 @@ public class ViewMatchupActivity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             toggleMatchupVisibility(View.INVISIBLE, View.VISIBLE);
-                            //setMatchup(null);
                     }
 
                 });
