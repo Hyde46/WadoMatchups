@@ -62,20 +62,20 @@ public class ViewMatchupActivity extends AppCompatActivity {
     private void requestMatchup(String[] playerName){
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "127.0.0.1";
+        String url = "http://www.google.com";
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>(){
-                    @Override
-                    public void onResponse(String response) {
-                        setMatchup(response);
-                    }
+                        @Override
+                        public void onResponse(String response) {
+                            setMatchup(response);
+                        }
                 }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                //toggleMatchupVisibility(View.INVISIBLE, View.VISIBLE);
-                setMatchup(null);
-            }
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            toggleMatchupVisibility(View.INVISIBLE, View.VISIBLE);
+                            //setMatchup(null);
+                    }
 
                 });
         queue.add(stringRequest);
