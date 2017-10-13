@@ -64,7 +64,7 @@ public class ViewMatchupActivity extends AppCompatActivity {
         //Incoporate playerName into request
         // as GET Request for now
 
-        String url = "http://www.google.com";
+        String url = "http://matchup.winadual.de/getPlayerMatchup.php";
         String reqUrl = url+"?firstName="+playerName[0]+"&lastName="+playerName[1];
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, reqUrl,

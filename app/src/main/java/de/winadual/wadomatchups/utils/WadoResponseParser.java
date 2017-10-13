@@ -17,7 +17,7 @@ public class WadoResponseParser {
     public final static int MATCHUP_NOT_READY = 1;
     public final static int MATCHUP_SERVER_ERROR = 2;
 
-    private final String testJSON = "{ \"opFirstName\":\"Dude\",\"opLastName\":\"Dudeson\" ,\"roundNumber\":\"2\",\"tableNumber\":\"1\"}";
+    //private final String testJSON = "{ \"opFirstName\":\"Dude\",\"opLastName\":\"Dudeson\" ,\"roundNumber\":\"2\",\"tableNumber\":\"1\"}";
 
     public ResponseContainer parseResponse(String serverResponse){
         ResponseContainer rC = new ResponseContainer();
@@ -29,7 +29,7 @@ public class WadoResponseParser {
         //parse serverResponse as JSON string
         try {
             //JSONObject jsonObj = new JSONObject(serverResponse);
-            JSONObject jsonObj = new JSONObject(testJSON);
+            JSONObject jsonObj = new JSONObject(serverResponse);
 
             parsedFirstName = jsonObj.getString("opFirstName");
             parsedName = jsonObj.getString("opLastName");
