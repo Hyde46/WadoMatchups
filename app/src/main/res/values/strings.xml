@@ -18,4 +18,5 @@
     <string name="saved_first_name" translatable="false">de.winadual.wadomatchups.PREF_FIRST_NAME</string>
     <string name="saved_last_name" translatable="false">de.winadual.wadomatchups.PREF_LAST_NAME</string>
     <string name="matchup_no_connection">Couldn\'t connect to Server</string>
+    <string name="version_number" translatable="false">V 1.0.1a</string>
 </resources>
