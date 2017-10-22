@@ -10,4 +10,5 @@
     <string name="button_synch_matchup">Aktualisieren</string>
     <string name="right_opponent">noch festzulegen</string>
     <string name="matchup_no_connection">Server konnte nicht erreicht werden</string>
+    <string name="next_event">"Wir sind zurück mit "</string>
 </resources>

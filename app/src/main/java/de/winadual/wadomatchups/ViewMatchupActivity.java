@@ -14,6 +14,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.w3c.dom.Text;
+
 import de.winadual.wadomatchups.utils.WadoResponseParser;
 
 public class ViewMatchupActivity extends AppCompatActivity {
@@ -102,6 +104,9 @@ public class ViewMatchupActivity extends AppCompatActivity {
         TextView errMatchupText = (TextView) findViewById(R.id.noConnectionView);
         TextView errNoMatchupText = (TextView) findViewById(R.id.noMatchupView);
 
+        TextView nextEventText = (TextView) findViewById(R.id.nextEvent);
+        nextEventText.setVisibility(View.INVISIBLE);
+
 
         //Toggle visibility on all the Textviews we fetched.
         leftOpponentText.setVisibility(viewVisibility);
@@ -137,6 +142,9 @@ public class ViewMatchupActivity extends AppCompatActivity {
             case WadoResponseParser.MATCHUP_SERVER_ERROR:
                 setMatchupError();
                 break;
+            case WadoResponseParser.MATCHUP_NEXT_EVENT:
+                setNextEvent(rC.getNextEvent(),rC.getNextDate());
+                break;
             default:
 
         }
@@ -156,6 +164,18 @@ public class ViewMatchupActivity extends AppCompatActivity {
         toggleMatchupVisibility(View.INVISIBLE, View.INVISIBLE);
         TextView errNoMatchupText = (TextView) findViewById(R.id.noMatchupView);
         errNoMatchupText.setVisibility(View.VISIBLE);
+    }
+
+    private void setNextEvent(String nextEvent, String nextDate){
+        toggleMatchupVisibility(View.INVISIBLE, View.INVISIBLE);
+        TextView errNoMatchupText = (TextView) findViewById(R.id.noMatchupView);
+        errNoMatchupText.setVisibility(View.VISIBLE);
+        TextView nextEventText = (TextView) findViewById(R.id.nextEvent);
+        nextEventText.setVisibility(View.VISIBLE);
+
+        String nextEventTextString = (String) nextEventText.getHint();
+
+        nextEventText.setText(nextEventTextString + " "+nextEvent +" : "+ nextDate);
     }
 
 }
